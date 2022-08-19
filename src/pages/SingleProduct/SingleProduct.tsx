@@ -8,6 +8,7 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import './SingleProduct.scss';
 import DefaultButton from "../../components/UI/DefaultButton/DefaultButton";
 import { MdPlusOne } from 'react-icons/md';
+import cartSvg from '../../assets/icons/cart.svg';
 
 
 const SingleProduct: React.FC = () => {
@@ -83,7 +84,7 @@ const SingleProduct: React.FC = () => {
                                     Buy!
                                 </DefaultButton>
                                 <DefaultButton onClick={() => addProductToCart(700)}>
-                                    <img src="/assets/icons/cart.svg" alt="cart" />
+                                    <img src={cartSvg} alt="cart" />
                                     Add to cart
                                     <MdPlusOne
                                         className={`product__buy--animation ${animation}`}

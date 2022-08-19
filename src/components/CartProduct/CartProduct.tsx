@@ -7,7 +7,9 @@ import {
     removeFromCart
 } from '../../store/slices/cartSlice';
 import './CartProduct.scss';
-
+import plusSvg from '../../assets/icons/plus.svg';
+import minusSvg from '../../assets/icons/minus.svg';
+import trashSvg from '../../assets/icons/trash.svg';
 
 interface CartProductProps {
     product: ICartProduct;
@@ -34,7 +36,7 @@ const CartProduct: React.FC<CartProductProps> = ({ product }) => {
             <div className="cart__product--header">
                 <img
                     className="cart__product--delete"
-                    src="/assets/icons/trash.svg"
+                    src={trashSvg}
                     alt="delete"
                     onClick={() => {
                         hide(1000)
@@ -51,13 +53,13 @@ const CartProduct: React.FC<CartProductProps> = ({ product }) => {
             <div className="cart__product--footer">
                 <div className="cart__product--count">
                     <img
-                        src="/assets/icons/minus.svg"
+                        src={minusSvg}
                         alt="minus"
                         onClick={() => dispatch(decreaseProductCount(product.id))}
                     />
                     <span className="cart__product--quantity">{product.quantity}</span>
                     <img
-                        src="/assets/icons/plus.svg"
+                        src={plusSvg}
                         alt="plus"
                         onClick={() => dispatch(increaseProductCount(product.id))}
                     />
