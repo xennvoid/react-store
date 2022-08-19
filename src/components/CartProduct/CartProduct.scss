@@ -1,0 +1,94 @@
+@import '../../mixin.scss';
+
+.cart__product{
+    position: relative;
+    margin-bottom: 15px;
+    padding: 20px;
+    @include main-card;
+
+    
+    &.open{
+        animation: bounce-in 1s ease-in;
+    }
+
+    &.close{
+        animation: bounce-out 1s ease-in;
+    }
+
+    @keyframes bounce-in{
+        0%    {opacity: 0;   transform: scale(0.5);}
+        100%  {opacity: 1;   transform: scale(1);}
+    }
+    
+    @keyframes bounce-out{
+        0%    {opacity: 1;   transform: scale(1);}
+        100%  {opacity: 0;   transform: scale(0.5);}
+    }
+
+    &--header {
+        display: flex;
+    }
+
+    &--delete {
+        position: absolute;
+        top:18px;
+        right: 25px;
+        cursor: pointer;
+    }
+
+    &--image {
+        
+        img {
+            object-fit: contain;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    &--description {
+        padding: 50px 0 0 20px;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;     
+        color: #1C1C27;
+    }
+
+    &--price {
+        padding-top: 12px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px; 
+        color: #AAAAAA;
+    }
+
+    &--footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    &--count {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    &--quantity {
+        margin: 17px 23px;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    &--fullprice {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #1C1C27;
+    }
+}

@@ -1,0 +1,23 @@
+@mixin default-button {
+    padding: 20px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: #101010;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.button-default {
+    @include default-button; 
+}
+
+.link-default {
+    @include default-button; 
+}

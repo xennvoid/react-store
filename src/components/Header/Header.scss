@@ -1,0 +1,43 @@
+.header {
+    flex-shrink: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap:0 2rem;
+
+        li {
+            position: relative;
+
+            a {
+                color:black;
+                text-decoration: none;
+            }
+
+            .count-label {
+                position: absolute;
+                top:-8px;
+                right: -8px;
+                display: block;
+                padding: 2px;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: #FFA542;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+@mixin boxshadow-borderradius {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.product {
+    margin-bottom: 20px;
+
+    &__characteristics {
+        margin-top: 20px;
+        display: flex;
+
+        @media screen and (max-width: 1150px){
+            flex-direction: column;
+        }
+    }
+
+
+    &__description {
+        flex: 1 1 70%;
+        background: #F9F9F9;
+        @include boxshadow-borderradius;
+
+        
+        @media screen and (max-width: 1150px){
+            margin-bottom: 30px;
+        }
+    
+        &--title {
+            padding: 20px 22px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #1C1C27;
+            background: #FFFFFF;
+            @include boxshadow-borderradius;
+
+            @media screen and (max-width: 440px){
+               text-align: center;
+            }
+        }
+    
+        &--data {
+            padding: 20px 22px;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            color: #1C1C27;
+
+            ul {
+
+                li {
+                    margin: 10px 0;
+
+                    span {
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+    
+    &__buy {
+        margin-left: 30px;
+
+        @media screen and (max-width: 1150px){
+            margin-left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 440px){
+            flex-direction: column;
+        }
+
+        a, button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 20px;
+
+                @media screen and (max-width: 1150px){
+                    margin-bottom: 0;
+                    margin-right: 20px;
+                }
+
+                @media screen and (max-width: 440px){
+                    margin-bottom: 15px;
+                    margin-right: 0;
+                }
+        
+            }
+
+            img {
+                margin: 0 5px;
+            }
+        }
+
+        &--animation {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+            font-size: 30px;
+            color: orange;
+
+            &.show {
+                display: block;
+                animation: bounce-in 0.7s ease-in;
+            }
+
+            @keyframes bounce-in{
+                0%    {
+                    opacity: 0;   
+                    transform: scale(0.5) translate(0,0);
+                }
+                100%  {
+                    opacity: 1;   
+                    transform: scale(1) translate(50px,-50px);
+                }
+            }
+        }
+    }
+}
