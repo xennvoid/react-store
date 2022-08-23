@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-store/static/css/main.bdee066d.css",
-    "main.js": "/react-store/static/js/main.b84b550a.js",
+    "main.css": "/react-store/static/css/main.2135b07c.css",
+    "main.js": "/react-store/static/js/main.09732d5f.js",
     "static/media/cart.svg": "/react-store/static/media/cart.a9c359b5e2136646a208a855a2e85dca.svg",
     "static/media/trash.svg": "/react-store/static/media/trash.16d6f0bc338321c604f5b003ef1c5b3d.svg",
     "index.html": "/react-store/index.html",
     "static/media/plus.svg": "/react-store/static/media/plus.67e896ce70204b51df859eb55c4e9b43.svg",
     "static/media/minus.svg": "/react-store/static/media/minus.8ad991047703272887a526d9ddfe8ae0.svg",
-    "main.bdee066d.css.map": "/react-store/static/css/main.bdee066d.css.map",
-    "main.b84b550a.js.map": "/react-store/static/js/main.b84b550a.js.map"
+    "main.2135b07c.css.map": "/react-store/static/css/main.2135b07c.css.map",
+    "main.09732d5f.js.map": "/react-store/static/js/main.09732d5f.js.map"
   },
   "entrypoints": [
-    "static/css/main.bdee066d.css",
-    "static/js/main.b84b550a.js"
+    "static/css/main.2135b07c.css",
+    "static/js/main.09732d5f.js"
   ]
 }
