@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
+import { RootState } from "..";
 import { IProduct } from "../../types/product";
 
 
@@ -17,11 +18,13 @@ const initialState: ProductsState = {
     error: null
 }
 
-export const getProducts = createAsyncThunk<IProduct[], undefined, { rejectValue: any }>(
+export const getProducts = createAsyncThunk<IProduct[], undefined, { rejectValue: any, state: RootState }>(
     'product/getProducts',
     async (_, thunkAPI) => {
         try {
-            const response = await axios.get('https://fakestoreapi.com/products')
+            const categorie = thunkAPI.getState().categories.currentCategorie;
+
+            const response = await axios.get(`https://fakestoreapi.com/products${categorie === 'all' ? '' : '/category/' + categorie}`)
 
             if (response.status !== 200)
                 throw thunkAPI.rejectWithValue(response.status)

@@ -1,13 +1,20 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.scss';
 import { AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
 import Logo from '../Logo/Logo';
-import { useAppSelector } from '../../hooks/typedHooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/typedHooks';
+import { slide as Menu } from 'react-burger-menu';
+import ProductCategories from '../ProductCategories/ProductCategories';
+import Navigation from '../Navigation/Navigation';
+import { burgerClose, burgerOpen } from '../../store/slices/burgerSlice';
 
 const Header: React.FC = () => {
 
     const { wishlist } = useAppSelector(state => state.product)
     const { cart } = useAppSelector(state => state.cart)
+    const path = useLocation().pathname;
+    const { burgerIsOpen } = useAppSelector(state => state.burger)
+    const dispatch = useAppDispatch()
 
     return (
         <header className="header">
@@ -16,10 +23,7 @@ const Header: React.FC = () => {
                 <ul>
                     <li>
                         <Link to='wishlist'>
-                            <AiOutlineHeart
-                                size={24}
-                                fill='#838383'
-                            />
+                            <AiOutlineHeart size={24} fill='#838383' />
                         </Link>
                         {
                             wishlist.length
@@ -33,10 +37,7 @@ const Header: React.FC = () => {
                     </li>
                     <li>
                         <Link to='cart'>
-                            <AiOutlineShoppingCart
-                                size={24}
-                                fill='#838383'
-                            />
+                            <AiOutlineShoppingCart size={24} fill='#838383' />
                         </Link>
                         {
                             cart.length
@@ -47,6 +48,12 @@ const Header: React.FC = () => {
                                 </span>
                                 : null
                         }
+                    </li>
+                    <li>
+                        <Menu right isOpen={burgerIsOpen} onOpen={() => dispatch(burgerOpen())} onClose={() => dispatch(burgerClose())}>
+                            {path === '/' ? <ProductCategories additionalClass='-burger' /> : null}
+                            <Navigation />
+                        </Menu>
                     </li>
                 </ul>
             </nav>

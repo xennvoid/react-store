@@ -5,7 +5,7 @@ import './DefaultButton.scss'
 type DefaultButtonProps = {
     to?: string;
     children: React.ReactNode;
-    onClick?: (...args: any[]) => any
+    onClick?: any
 }
 
 const DefaultButton: React.FC<DefaultButtonProps> = ({ to, children, onClick }) => {

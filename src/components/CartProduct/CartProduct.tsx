@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { useAppDispatch } from '../../hooks/typedHooks';
 import {
     decreaseProductCount,
@@ -25,9 +25,9 @@ const CartProduct: React.FC<CartProductProps> = ({ product }) => {
 
         setAnimation('close')
 
-        await new Promise(r => setTimeout(r, ms))
-
         dispatch(removeFromCart(product.id))
+
+        await new Promise(r => setTimeout(r, ms))
     }
 
 
@@ -39,7 +39,7 @@ const CartProduct: React.FC<CartProductProps> = ({ product }) => {
                     src={trashSvg}
                     alt="delete"
                     onClick={() => {
-                        hide(1000)
+                        hide(500)
                     }}
                 />
                 <div className="cart__product--image">

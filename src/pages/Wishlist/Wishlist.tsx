@@ -25,7 +25,6 @@ const Wishlist = (props: Props) => {
     const getWishItems = async (id: number) => {
         const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
         setWishItems(items => [...items, response.data])
-        console.log(id)
     }
 
     return (

@@ -1,0 +1,36 @@
+.product__categories {
+
+
+    &-burger {
+        
+
+        ul {
+            @media screen and (max-width:800px){
+                display: block;
+                text-transform: uppercase;
+
+
+                li {
+                    padding: 0.5rem 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:800px){
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-weight: 600;
+        padding: 10px 0;
+        text-transform: uppercase;
+
+        li {
+            cursor: pointer;
+        }
+    }
+}
