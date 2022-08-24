@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/react-store/static/css/main.2135b07c.css",
-    "main.js": "/react-store/static/js/main.09732d5f.js",
+    "main.css": "/react-store/static/css/main.5eb6c4ae.css",
+    "main.js": "/react-store/static/js/main.778225a0.js",
+    "static/media/office.webp": "/react-store/static/media/office.3c29fac1078f740e4bb3.webp",
     "static/media/cart.svg": "/react-store/static/media/cart.a9c359b5e2136646a208a855a2e85dca.svg",
+    "static/media/location.svg": "/react-store/static/media/location.ed029d170faa39920f092bb8ecfc8ee5.svg",
     "static/media/trash.svg": "/react-store/static/media/trash.16d6f0bc338321c604f5b003ef1c5b3d.svg",
+    "static/media/phone.svg": "/react-store/static/media/phone.71f0286ac5c890b315ee23b112b4a9a2.svg",
     "index.html": "/react-store/index.html",
     "static/media/plus.svg": "/react-store/static/media/plus.67e896ce70204b51df859eb55c4e9b43.svg",
     "static/media/minus.svg": "/react-store/static/media/minus.8ad991047703272887a526d9ddfe8ae0.svg",
-    "main.2135b07c.css.map": "/react-store/static/css/main.2135b07c.css.map",
-    "main.09732d5f.js.map": "/react-store/static/js/main.09732d5f.js.map"
+    "main.5eb6c4ae.css.map": "/react-store/static/css/main.5eb6c4ae.css.map",
+    "main.778225a0.js.map": "/react-store/static/js/main.778225a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.2135b07c.css",
-    "static/js/main.09732d5f.js"
+    "static/css/main.5eb6c4ae.css",
+    "static/js/main.778225a0.js"
   ]
 }
