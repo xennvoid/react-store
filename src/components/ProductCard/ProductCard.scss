@@ -1,3 +1,5 @@
+@import '../../mixin.scss';
+
 .product__card{
 
     display: flex;
@@ -6,9 +8,7 @@
     padding: 15px 20px;
     font-size: 18px;
     font-weight: 600;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
+    @include main-card;
 
     &--image {
         

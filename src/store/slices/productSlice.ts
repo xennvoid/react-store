@@ -8,14 +8,14 @@ type ProductsState = {
     products: IProduct[],
     wishlist: number[],
     loading: boolean,
-    error: string | null
+    error: string | null,
 }
 
 const initialState: ProductsState = {
     products: [],
     wishlist: JSON.parse(localStorage.getItem('wishlist') || '[]'),
     loading: false,
-    error: null
+    error: null,
 }
 
 export const getProducts = createAsyncThunk<IProduct[], undefined, { rejectValue: any, state: RootState }>(
@@ -25,6 +25,8 @@ export const getProducts = createAsyncThunk<IProduct[], undefined, { rejectValue
             const categorie = thunkAPI.getState().categories.currentCategorie;
 
             const response = await axios.get(`https://fakestoreapi.com/products${categorie === 'all' ? '' : '/category/' + categorie}`)
+
+            await console.log(response)
 
             if (response.status !== 200)
                 throw thunkAPI.rejectWithValue(response.status)

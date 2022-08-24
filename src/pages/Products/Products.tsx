@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import ProductCardSkeleton from "../../components/ProductCardSkeleton/ProductCardSkeleton";
 import ProductCategories from "../../components/ProductCategories/ProductCategories";

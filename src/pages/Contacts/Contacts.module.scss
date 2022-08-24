@@ -1,0 +1,88 @@
+@import '../../mixin.scss';
+
+.contacts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    @media screen and (max-width:1000px){
+        flex-direction: column;
+    }
+}
+
+
+.contacts__office {
+    padding: 20px;
+    @include main-card;
+    flex: 0 0 50%;
+    align-self: flex-start;
+}
+
+.contacts__title {
+    margin-bottom: 1rem;
+}
+
+.contacts__office_img {
+
+    img {
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 30px;
+    }
+}
+
+.contacts__title {
+    font-weight: 600;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    color: #1C1C27;
+}
+
+.contacts__address {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.contacts__location {
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.contacts__phone {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.contacts__media {
+
+    @media screen and (max-width:1000px){
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+.contacts__media > div {
+    @include main-card;
+    padding: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    @media screen and (max-width:1000px){
+        padding: 20px;
+    }
+}

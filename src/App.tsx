@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.scss';
 import Layout from './layout/Layout';
 import Cart from './pages/Cart/Cart';
+import Contacts from './pages/Contacts/Contacts';
 import Products from './pages/Products/Products';
 import SingleProduct from './pages/SingleProduct/SingleProduct';
 import Terms from './pages/Terms/Terms';
@@ -19,7 +20,7 @@ function App() {
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="cart" element={<Cart />} />
           <Route path="terms" element={<Terms />} />
-          <Route path="contacts" element={<p>Contacts</p>} />
+          <Route path="contacts" element={<Contacts />} />
           <Route path="*" element={<p>Not found!</p>} />
         </Route>
       </Routes>
